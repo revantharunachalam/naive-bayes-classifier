@@ -1,0 +1,27 @@
+body{
+    background-image: url('https://wallpaperaccess.com/full/1323698.jpg');
+}
+
+.container {
+    text-align: center;
+}
+
+.head-text-color {
+    color: antiquewhite;
+}
+
+ol{
+    text-align: left;
+    padding-left: 8%;
+}
+
+.card-alignment-right{
+    margin-left: 54%;
+    margin-top: -20%;
+    color: green;
+}
+
+.text-font-size{
+    font-size: 1.9vw;
+}
+

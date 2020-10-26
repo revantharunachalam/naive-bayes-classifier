@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style1.css')}}">
+
+    <title>Iris Species Classifier</title>
+  </head>
+  <body>
+    <p><br><br>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col"></div>
+          <div class="col-10">
+            <div class="card bg-dark text-white">
+              <img src="https://homeopathyplus.com/wp-content/uploads/2018/04/Iris-1.jpg" class="card-img" alt="Iris_picture">
+                  <div class="card-img-overlay head-text-color">
+                    <h5 class="card-title h1 text-font-size"><b><u>Iris Species Classifier</u></b></h5>
+                    <p class="card-text h3 text-font-size">There are three types of species are there in Iris. They are:</p>
+                    <li class="card-text h3 text-font-size">
+                      <ol>1. Iris Versicolor</ol>
+                      <ol>2. Iris Virginica</ol>
+                      <ol>3. Iris Setosa</ol>
+                    </li>
+                    <div class="card card-alignment-right" style="width: 17vw;">
+                      <img src="{{class_img}}" class="card-img-top" alt="predicted_iris">
+                      <div class="card-body">
+                        <p class="card-text h4 text-font-size">{{class_title}}</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="col"></div>
+        </div>
+        <br>
+        <div class="row justify-content-center">
+          <div class="col"></div>
+          <div class="col-5">
+            <h2 class="head-text-color text-font-size"><b>Enter the Sepal length and Sepal width</b></h2>
+            <p class="login">
+              <form action="{{url_for('predict')}}" method="post" class="form-inline" style="margin-left: 9%;">
+                <div class="form-group mx-sm-3 mb-2">
+                  <input type="number" name="length" class="form-control" placeholder="Length" step=".1" min="0.1" max="8">
+                </div><br>
+                <div class="form-group mx-sm-3 mb-2">
+                  <input type="number" name="width" class="form-control" placeholder="Width" step=".1" min="0.1" max="5">
+                </div>
+                <button type="submit" class="btn btn-lg btn-outline-light">Classify</button>
+              </form>
+            </p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </p>
+        
+  </body>
+</html>
+
+
+<!-- setosa: https://alchetron.com/cdn/iris-setosa-0ab3145a-68f2-41ca-a529-c02fa2f5b02-resize-750.jpeg
+virginica: https://www.fs.fed.us/wildflowers/beauty/iris/Blue_Flag/images/iris_virginica/iris_virginica_virginica_lg.jpg
+versicolor: https://upload.wikimedia.org/wikipedia/commons/d/db/Iris_versicolor_4.jpg -->
